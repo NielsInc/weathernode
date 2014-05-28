@@ -1,0 +1,21 @@
+extends layout
+
+block content 
+	.small-12.columns.center.no-pad
+		span.temperature
+			|22°
+		img(src='http://placehold.it/1000x600&text=[weather]', data-cfsrc='http://placehold.it/1000x600&text=[weather]')
+		#demo.center(style='width: 500px; height: 100px;')
+	script.
+		var x = document.getElementById("demo");
+		function getLocation(){
+			if (navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}else{x.innerHTML = "Geolocation is not supported by this browser.";}
+		}
+		function showPosition(position){
+			x.innerHTML = "Latitude: " + position.coords.latitude + 
+			"<br>Longitude: " + position.coords.longitude; 
+		}
+
+	

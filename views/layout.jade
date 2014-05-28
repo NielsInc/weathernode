@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+	head
+		title WeatherNode - The platform independent weather app
+		block styles
+			link(id='css', rel='stylesheet', href='/stylesheets/normalize.css')
+			link(id='css', rel='stylesheet', href='/stylesheets/foundation.min.css')
+			link(id='css', rel='stylesheet', href='/stylesheets/style.css')
+			link(id='css', rel='stylesheet', href='/stylesheets/weather-icons.min.css')
+			link(id='css', rel='stylesheet', href='/stylesheets/foundation-icons.css')
+			link(rel='shortcut icon', href='/images/favicon.ico')
+		block scripts
+			script(type='text/javascript', src='/javascripts/vendor/modernizr.js')
+	body
+		block nav
+			.off-canvas-wrap(data-offcanvas)
+				.inner-wrap
+					nav.tab-bar
+						section.left-small
+							a(class='left-off-canvas-toggle menu-icon', href='#')
+								span
+						section.middle.tab-bar-section
+							h1.title 
+								i.wi-day-sunny-overcast
+								|&nbsp;&nbsp;WeatherNode
+								
+					aside.left-off-canvas-menu
+						ul.off-canvas-list
+							li
+								label Menu
+							li
+								a(href='#') 
+									i.fi-refresh
+									|&nbsp;&nbsp;Refresh
+							li 
+								a(href='#')
+									i.fi-info
+									|&nbsp;&nbsp;About  
+					section.main-section
+						block content
+					a.exit-off-canvas
+		block footer
+		block bottomjs
+			script(type='text/javascript', src='/javascripts/vendor/jquery.js')
+			script(type='text/javascript', src='/javascripts/vendor/fastclick.js')
+			script(type='text/javascript', src='/javascripts/foundation.min.js')
+			script $(document).foundation();

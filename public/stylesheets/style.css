@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+.center{
+	margin: 0 auto;
+	text-align: center;	
+}
+
+.no-pad{
+	padding: 0;
+}
+
+.temperature{
+	font-family: 'Oswald';
+	font-size: 30pt;
+}
